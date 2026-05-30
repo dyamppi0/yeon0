@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曣(연) 가문의 쌍둥이 - 연다진 & 연다희 프로필</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Noto Sans KR, Cinzel) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        
+        /* ✨ 커스텀 애니메이션 & 효과 (세련됨 추가) */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+        }
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 6s ease-in-out 3s infinite;
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-glow {
+            animation: pulse-glow 4s ease-in-out infinite;
+        }
+
+        /* 텍스트 네온 발광 효과 */
+        .text-glow-emerald { text-shadow: 0 0 15px rgba(52, 211, 153, 0.6); }
+        .text-glow-rose { text-shadow: 0 0 15px rgba(251, 113, 133, 0.6); }
+        .text-glow-white { text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+
+        /* 서서히 나타나는 효과 */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-up {
+            animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+    </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 selection:bg-rose-500 selection:text-white overflow-x-hidden relative">
+
+    <!-- 🎵 오디오 태그 -->
+    <audio id="bgm" loop>
+        <source src="bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- 🌌 움직이는 거대한 배경 빛무리 (신비로운 효과) -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] bg-emerald-600/10 rounded-full blur-[120px] animate-glow mix-blend-screen"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50vw] h-[50vw] bg-rose-600/10 rounded-full blur-[120px] animate-glow mix-blend-screen" style="animation-delay: 2s;"></div>
+    </div>
+
+    <!-- 상단 네비게이션 / 가문 헤더 (유리 효과 강화) -->
+    <header class="border-b border-zinc-800/50 bg-zinc-950/60 backdrop-blur-xl sticky top-0 z-50 px-4 py-4 transition-all">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-cinzel tracking-[0.3em] text-lg font-bold text-zinc-200 text-glow-white">THE YEON CLAN</span>
+            <div class="flex gap-6 text-xs font-medium text-zinc-400 tracking-wider">
+                <a href="#profile" class="hover:text-rose-400 hover:text-glow-rose transition-all duration-300">PROFILE</a>
+                <a href="#accessory" class="hover:text-emerald-400 hover:text-glow-emerald transition-all duration-300">ACCESSORY</a>
+                <a href="#history" class="hover:text-zinc-200 transition-all duration-300">HISTORY</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 히어로 섹션 (가문 슬로건) -->
+    <section class="relative py-32 px-4 border-b border-zinc-900 bg-gradient-to-b from-transparent to-zinc-950 text-center flex flex-col items-center justify-center min-h-[60vh] fade-up">
+        <div class="max-w-3xl mx-auto space-y-8 relative z-10">
+            <p class="font-cinzel text-xs tracking-[0.4em] text-rose-400 uppercase font-bold text-glow-rose">The Pristine Star</p>
+            <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-relaxed font-cinzel text-glow-white">
+                "청명한 별, 셀 수 없을 만큼 많기에<br>
+                그 힘에 눈이 멀 정도로 밝게 빛나라."
+            </h1>
+            <div class="w-12 h-[1px] bg-zinc-700 mx-auto"></div>
+            <p class="text-sm md:text-base text-zinc-400 max-w-xl mx-auto leading-loose font-light">
+                언젠가 이 세계가 파멸하는 날이 올지어니,<br>
+                욕심(慾心)이라는 본질 아래 스러져가는 세계를 지키는 연(曣) 가문의 치유 마법사들.
+            </p>
+        </div>
+    </section>
+
+    <!-- 메인 프로필 섹션 (쌍둥이 대칭 레이아웃) -->
+    <main id="profile" class="max-w-6xl mx-auto px-4 py-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
+            
+            <!-- 왼쪽: 오라비 연다진 (Yeon Da-jin) -->
+            <!-- ✨ 글래스모피즘 & 떠다니는 효과 & 호버시 네온 테두리 적용 -->
+            <div class="animate-float space-y-8 border border-zinc-800/50 bg-zinc-900/40 backdrop-blur-lg p-6 md:p-10 rounded-3xl relative overflow-hidden group hover:border-emerald-500/50 hover:shadow-[0_0_40px_rgba(52,211,153,0.15)] transition-all duration-700">
+                <div class="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-emerald-400 to-transparent opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                
+                <!-- 연다진 일러스트 영역 -->
+                <div class="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800/50 shadow-2xl cursor-pointer" id="dajin-image-container">
+                    
+                    <!-- 🖼️ 오빠 이미지 넣는 곳 (src 안의 주소를 내 이미지 경로로 바꾸세요!) -->
+                    <img id="dajin-profile-img" src="https://imgur.com/iQhjlfv.jpg" alt="연다진 일러스트"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                         data-daily-src="https://imgur.com/iQhjlfv.jpg"
+                         data-combat-src="https://imgur.com/r4tIcAh.jpg"
+                    >
+                    
+                    <!-- 이미지 위 오버레이 그라데이션 -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+                    
+                    <div class="absolute bottom-6 left-6 bg-zinc-950/80 backdrop-blur-md border border-emerald-500/30 px-4 py-2 rounded-lg text-xs text-emerald-400 font-mono tracking-widest uppercase shadow-[0_0_15px_rgba(52,211,153,0.2)]">
+                        <span id="dajin-image-mode-indicator">1st Twin • Offense & Heal (일상)</span>
+                    </div>
+                </div>
+
+                <!-- 프로필 헤더 -->
+                <div class="space-y-3">
+                    <div class="flex justify-between items-end">
+                        <h2 class="text-4xl font-extrabold tracking-wide group-hover:text-emerald-300 transition-colors">연다진 <span class="font-cinzel text-emerald-400 text-xl ml-2 opacity-80">曣多辰</span></h2>
+                        <span class="text-xs text-zinc-500 font-light tracking-wider uppercase">Elder Brother</span>
+                    </div>
+                    <!-- 추가 프로필 정보 -->
+                    <div class="flex flex-wrap gap-x-4 text-sm text-zinc-400">
+                        <span class="font-medium text-zinc-300">생일:</span> 2월 24일
+                        <span class="font-medium text-zinc-300">신장:</span> 182cm
+                    </div>
+                    <p class="text-sm italic text-zinc-400 group-hover:text-zinc-300 transition-colors">"오늘은 당신이 좋아하는 걸 준비해봤어요. 마음에 드나요?"</p>
+                </div>
+
+                <!-- 상세 설정 태그 -->
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">#사회성만렙</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">#철저한_현실주의</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">#내사람올인형</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">#가면속트라우마</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors cursor-default">#ISFJ</span>
+                </div>
+
+                <!-- 특징 디테일 -->
+                <div class="space-y-5 text-sm text-zinc-300 leading-loose">
+                    <p class="font-light">
+                        사회성이 우수하고 사람들을 능숙하게 다루며 조화와 균형을 추구한다. 타인의 감정을 극도로 배려하여 쓴소리는 속으로 삼키지만, 정작 자신의 진솔한 내면 고백에는 매우 서툴다.
+                    </p>
+                    <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800/50 space-y-3 group-hover:border-emerald-500/30 transition-colors">
+                        <div class="text-xs font-bold text-emerald-400 flex items-center gap-2 tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> 이기적 성향 (내 사람 주의)
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                            과거 소중한 사람을 잃은 트라우마로 인해, 생사의 기로에서는 고민 없이 오직 '자신의 바운더리 내부의 존재'만을 수호한다. 타인에게 냉담해 보일지언정 내 사람만큼은 절대 잃지 않겠다는 이기적 헌신을 보인다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 오른쪽: 누이 연다희 (Yeon Da-hee) -->
+            <!-- ✨ 글래스모피즘 & 떠다니는 효과(시간차) & 호버시 네온 테두리 적용 -->
+            <div class="animate-float-delayed space-y-8 border border-zinc-800/50 bg-zinc-900/40 backdrop-blur-lg p-6 md:p-10 rounded-3xl relative overflow-hidden group hover:border-rose-500/50 hover:shadow-[0_0_40px_rgba(251,113,133,0.15)] transition-all duration-700">
+                <div class="absolute top-0 right-0 w-1.5 h-full bg-gradient-to-b from-rose-400 to-transparent opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                
+                <!-- 연다희 일러스트 영역 -->
+                <div class="relative aspect-[3/4] w-full rounded-2xl overflow-hidden bg-zinc-950 border border-zinc-800/50 shadow-2xl cursor-pointer" id="dahee-image-container">
+                    
+                    <!-- 🖼️ 동생 이미지 넣는 곳 (src 안의 주소를 내 이미지 경로로 바꾸세요!) -->
+                    <img id="dahee-profile-img" src="https://imgur.com/DtL4kEz.jpg" alt="연다희 일러스트"
+                         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                         data-daily-src="https://imgur.com/DtL4kEz.jpg"
+                         data-combat-src="https://imgur.com/itQtaeN.jpg"
+                    >
+                    
+                    <!-- 이미지 위 오버레이 그라데이션 -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent opacity-80"></div>
+
+                    <div class="absolute bottom-6 right-6 bg-zinc-950/80 backdrop-blur-md border border-rose-500/30 px-4 py-2 rounded-lg text-xs text-rose-400 font-mono tracking-widest uppercase shadow-[0_0_15px_rgba(251,113,133,0.2)]">
+                        <span id="dahee-image-mode-indicator">2nd Twin • High Healing (일상)</span>
+                    </div>
+                </div>
+
+                <!-- 프로필 헤더 -->
+                <div class="space-y-3">
+                    <div class="flex justify-between items-end">
+                        <h2 class="text-4xl font-extrabold tracking-wide group-hover:text-rose-300 transition-colors">연다희 <span class="font-cinzel text-rose-400 text-xl ml-2 opacity-80">曣多熙</span></h2>
+                        <span class="text-xs text-zinc-500 font-light tracking-wider uppercase">Younger Sister</span>
+                    </div>
+                    <!-- 추가 프로필 정보 -->
+                    <div class="flex flex-wrap gap-x-4 text-sm text-zinc-400">
+                        <span class="font-medium text-zinc-300">생일:</span> 2월 24일
+                        <span class="font-medium text-zinc-300">신장:</span> 164cm
+                    </div>
+                    <p class="text-sm italic text-zinc-400 group-hover:text-zinc-300 transition-colors">"너, 그렇게 하다간 모가지 따일 걸? 조심하는 편이 좋아."</p>
+                </div>
+
+                <!-- 상세 설정 태그 -->
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-rose-500/50 hover:text-rose-400 transition-colors cursor-default">#직설적_팩폭러</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-rose-500/50 hover:text-rose-400 transition-colors cursor-default">#강인한_멘탈</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-rose-500/50 hover:text-rose-400 transition-colors cursor-default">#확고한_윤리의식</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-rose-500/50 hover:text-rose-400 transition-colors cursor-default">#츤데레_아가씨</span>
+                    <span class="px-3 py-1.5 text-xs rounded-full bg-zinc-950/50 border border-zinc-800 text-zinc-300 hover:border-rose-500/50 hover:text-rose-400 transition-colors cursor-default">#ENTJ</span>
+                </div>
+
+                <!-- 특징 디테일 -->
+                <div class="space-y-5 text-sm text-zinc-300 leading-loose">
+                    <p class="font-light">
+                        자신의 실력을 완벽하게 자각하고 있으며, 대담하고 당차게 행동한다. 돌려 말하는 법 없이 정직하고 직설적인 언어로 감정을 여과 없이 드러내며, 자만심 속에서도 타인의 도움에 감사할 줄 안다.
+                    </p>
+                    <div class="bg-zinc-950/60 p-5 rounded-2xl border border-zinc-800/50 space-y-3 group-hover:border-rose-500/30 transition-colors">
+                        <div class="text-xs font-bold text-rose-400 flex items-center gap-2 tracking-wide">
+                            <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span> 이타적 성향 (약자 보호주의)
+                        </div>
+                        <p class="text-xs text-zinc-400 leading-relaxed font-light">
+                            올곧은 정의감과 고결한 윤리의식의 소유자다. 생존의 한계 시간 속에서 지인과 무고한 약자(아이, 임산부 등)가 동시에 위기에 처한다면, 번민 끝에 사회적 약자를 먼저 구해낼 고결하고 강인한 멘탈리티를 품고 있다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- 치유 마법 & 약점 섹션 -->
+    <section class="border-y border-zinc-800/50 bg-zinc-950/80 backdrop-blur-md py-24 px-4">
+        <div class="max-w-5xl mx-auto space-y-16">
+            <div class="text-center space-y-3">
+                <h3 class="text-3xl font-bold font-cinzel text-glow-white tracking-widest">SYSTEM & LIMITATION</h3>
+                <p class="text-sm text-zinc-500 font-light">연남매의 마법 운용 한계와 극명한 아킬레스건</p>
+                <div class="w-8 h-[1px] bg-zinc-700 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-3xl border border-zinc-800/50 bg-gradient-to-b from-zinc-900/50 to-zinc-950/50 hover:-translate-y-2 transition-transform duration-500 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-bold font-cinzel text-xl shadow-[0_0_15px_rgba(52,211,153,0.1)]">I</div>
+                    <h4 class="font-bold text-zinc-200 text-lg">체력 소모식 치유</h4>
+                    <p class="text-sm text-zinc-400 leading-loose font-light">
+                        상처의 완전 봉합이 가능하나, 치유는 본인의 원초적 체력과 마력을 등가교환한다. 신중히 안배해 사용하지 않을 시 술자 역시 치명적인 생명 위기에 직면한다.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl border border-zinc-800/50 bg-gradient-to-b from-zinc-900/50 to-zinc-950/50 hover:-translate-y-2 transition-transform duration-500 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 font-bold font-cinzel text-xl shadow-[0_0_15px_rgba(251,113,133,0.1)]">II</div>
+                    <h4 class="font-bold text-zinc-200 text-lg">목의 치명적 아킬레스건</h4>
+                    <p class="text-sm text-zinc-400 leading-loose font-light">
+                        불사가 아닌 마법사로서, <span class="text-zinc-200 font-medium">'목의 특정 급소 부위'</span>에 치명상을 입을 경우 절대 자가 치유되지 않으며 거부반응으로 상해가 붕괴된다.
+                    </p>
+                </div>
+                <div class="p-8 rounded-3xl border border-zinc-800/50 bg-gradient-to-b from-zinc-900/50 to-zinc-950/50 hover:-translate-y-2 transition-transform duration-500 space-y-4">
+                    <div class="w-12 h-12 rounded-xl bg-zinc-500/10 border border-zinc-500/20 flex items-center justify-center text-zinc-400 font-bold font-cinzel text-xl">III</div>
+                    <h4 class="font-bold text-zinc-200 text-lg">지팡이 매개성</h4>
+                    <p class="text-sm text-zinc-400 leading-loose font-light">
+                        마력의 보조 연산 및 방출 유도를 위해 지팡이를 매개체로 쓴다. 무영창 발현도 가능하나, 지팡이가 없을 시 방출되는 마법적 화력과 응집도가 크게 감소한다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 남매의 액세서리 섹션 -->
+    <section id="accessory" class="max-w-5xl mx-auto px-4 py-24 space-y-12">
+        <div class="text-center space-y-3">
+            <span class="text-xs tracking-[0.3em] text-zinc-500 font-mono uppercase">Equipped Accessories</span>
+            <h3 class="text-3xl font-extrabold tracking-tight text-glow-white">마력을 담은 공명기</h3>
+            <p class="text-sm text-zinc-400 font-light">평범한 장신구 뒤에 숨겨진 그들만의 고유 연결망</p>
+        </div>
+
+        <div class="relative overflow-hidden border border-zinc-800/60 bg-zinc-900/30 backdrop-blur-xl rounded-[2rem] p-8 md:p-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <!-- 배경 글로우 -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-r from-emerald-500/5 to-rose-500/5 blur-3xl pointer-events-none"></div>
+
+            <div class="space-y-6 relative z-10">
+                <div class="flex items-center gap-4">
+                    <div class="relative flex h-3 w-3">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-3 w-3 bg-rose-500"></span>
+                    </div>
+                    <h4 class="text-xl font-bold text-zinc-200">분홍빛 귀걸이 & 중지의 은반지</h4>
+                </div>
+                <p class="text-sm text-zinc-300 leading-loose font-light">
+                    다진은 <strong class="text-emerald-400 font-medium text-glow-emerald">오른쪽 귀와 왼손 중지</strong>에, 다희는 <strong class="text-rose-400 font-medium text-glow-rose">왼쪽 귀와 오른손 중지</strong>에 비대칭으로 피어싱과 은빛 반지를 착용하고 있다. 
+                </p>
+                <p class="text-sm text-zinc-400 leading-loose font-light">
+                    이는 단순한 귀금속이 아닌, 서로의 파동을 실시간으로 감지하고 초단거리 통신을 교환할 수 있는 마력의 매개체다. 만에 하나 파괴되더라도 잔류 마력은 신속히 본래의 심장으로 안전하게 귀속된다.
+                </p>
+            </div>
+            
+            <div class="relative bg-zinc-950/80 rounded-2xl p-8 border border-zinc-800/50 text-center space-y-6 shadow-2xl z-10">
+                <div class="text-zinc-500 text-xs tracking-widest font-mono uppercase">Resonance Schematic</div>
+                <div class="flex justify-center gap-6 items-center py-4">
+                    <div class="w-20 h-20 rounded-full border border-rose-500/30 bg-rose-500/5 flex flex-col items-center justify-center text-xs text-rose-400 shadow-[0_0_20px_rgba(251,113,133,0.15)] animate-float">
+                        <span class="font-cinzel">Pink</span>
+                        <span class="font-light mt-1">Piercing</span>
+                    </div>
+                    <div class="text-zinc-600 font-cinzel text-2xl animate-pulse">⟷</div>
+                    <div class="w-20 h-20 rounded-full border border-emerald-500/30 bg-emerald-500/5 flex flex-col items-center justify-center text-xs text-emerald-400 shadow-[0_0_20px_rgba(52,211,153,0.15)] animate-float-delayed">
+                        <span class="font-cinzel">Silver</span>
+                        <span class="font-light mt-1">Ring</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 쌍둥이 개별 연대기 섹션 -->
+    <section id="history" class="border-t border-zinc-800/50 bg-zinc-900/20 py-24 px-4 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto space-y-16 relative z-10">
+            
+            <div class="text-center space-y-3">
+                <p class="font-cinzel text-xs text-emerald-400 tracking-[0.3em] text-glow-emerald">THE PERIWINKLE (VINCA) LORE</p>
+                <h3 class="text-3xl font-extrabold text-glow-white">빙카 : 엇갈린 두 줄기 연대기</h3>
+                <p class="text-sm text-zinc-400 font-light">동일한 비극 속에서 전혀 다른 방향으로 피어난 쌍둥이의 서사</p>
+            </div>
+
+            <!-- 남매 듀얼 연대기 그리드 -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+                
+                <!-- 왼쪽: 연다진의 연대기 -->
+                <div class="space-y-10">
+                    <div class="border-b border-zinc-800/60 pb-5">
+                        <h4 class="text-xl font-bold text-emerald-400 font-cinzel text-glow-emerald">
+                            Yeon Da-jin Chronology
+                        </h4>
+                        <p class="text-sm text-zinc-500 mt-2 font-light">상실을 딛고 공격의 검을 쥐게 된 천재의 기록</p>
+                    </div>
+
+                    <div class="space-y-10 border-l border-emerald-500/20 pl-8 ml-3">
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-emerald-500 border-4 border-zinc-950 shadow-[0_0_10px_rgba(52,211,153,0.5)] group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-zinc-500 tracking-wider">4~5세 [발현]</span>
+                            <h5 class="font-bold text-zinc-200 text-lg">치유 능력의 조기 개화</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">다친 새의 발을 감싸 안자 어린 손끝에서 뿜어져 나온 은은한 녹색 빛. 집안의 기대를 한 몸에 받으며 100년에 한 번 나올 천재로 추앙받으며 능력의 제어법을 무서운 속도로 흡수한다.</p>
+                        </div>
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-emerald-700 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-emerald-500 tracking-wider">7~8세 [참극]</span>
+                            <h5 class="font-bold text-emerald-300 text-lg">저주 침식과 극적인 트라우마</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">어줍잖게 흑마법을 연마한 신도의 이모 습격 사건. 이모를 치유하려 힘을 다하지만 악질적인 저주의 작용으로 시도할수록 살이 타들어 가며 악화된다. 힘의 과사용으로 자신의 생명력이 깎여 코피를 쏟아내던 와중 이모의 쓸쓸한 죽음을 목도한다.</p>
+                        </div>
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-zinc-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-zinc-500 tracking-wider">현재 [선택]</span>
+                            <h5 class="font-bold text-zinc-200 text-lg">수호와 말살을 위한 전환</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">탄생화인 빙카(즐거운 추억) 카드를 쥐어 준 이모의 마지막 유언을 뒤로하고 오랜 자기혐오와 방황을 겪는다. 이후 다희의 헌신적인 구원으로 트라우마를 이겨낸 후, 이모를 해친 일당들을 단죄하기 위해 '공격형 마법'을 최전선에서 운용하기 시작한다.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 연다희의 연대기 -->
+                <div class="space-y-10">
+                    <div class="border-b border-zinc-800/60 pb-5">
+                        <h4 class="text-xl font-bold text-rose-400 font-cinzel text-glow-rose">
+                            Yeon Da-hee Chronology
+                        </h4>
+                        <p class="text-sm text-zinc-500 mt-2 font-light">기둥이 되어 무너진 오라비를 붙잡은 굳건한 기록</p>
+                    </div>
+
+                    <div class="space-y-10 border-l border-rose-500/20 pl-8 ml-3">
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-rose-400 border-4 border-zinc-950 shadow-[0_0_10px_rgba(251,113,133,0.5)] group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-zinc-500 tracking-wider">4~5세 [비교]</span>
+                            <h5 class="font-bold text-zinc-200 text-lg">한 발짝 늦은 발현과 묵묵한 인정</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">다진보다 치유 능력의 발현은 다소 늦었다. 온 가문이 오라비인 다진을 '천재'라 우러러볼 때 질투 대신 그 실력을 쿨하게 인정하며, 다진을 제 나름의 '오라비'로서 존중하고 대우해주는 담대함을 키웠다.</p>
+                        </div>
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-rose-700 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-rose-500 tracking-wider">7~8세 [대면]</span>
+                            <h5 class="font-bold text-rose-300 text-lg">정면충돌과 정서적 구원</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">이모의 급작스러운 사망 이후 방에 틀어박혀 꽃병 속 빙카 꽃만 바라보던 다진. 늘 다정했던 오라비가 "나가!"라며 온 힘을 실어 집어던진 책에 맞으면서도 도망치지 않고 그의 멱살을 잡았다. 서럽게 울부짖으며 오라비를 암연에서 끄집어냈다.</p>
+                        </div>
+                        <div class="relative space-y-3 group">
+                            <div class="absolute -left-[41px] top-1.5 w-5 h-5 rounded-full bg-zinc-400 border-4 border-zinc-950 group-hover:scale-125 transition-transform"></div>
+                            <span class="text-xs font-mono text-zinc-500 tracking-wider">현재 [전념]</span>
+                            <h5 class="font-bold text-zinc-200 text-lg">완성된 순수 치유의 정점</h5>
+                            <p class="text-sm text-zinc-400 leading-loose font-light">다진이 복수와 단죄를 위해 공격 능력 개발에 온 신경을 쏟기 시작하자, 다희는 본래 다진의 공백이었던 '순수 치유' 영역의 최고 실력자 자리를 계승한다. 흔들리지 않는 단단한 멘탈을 앞세워 죽음의 문턱에 달한 이들을 완연히 고쳐내는 가문의 든든한 등불이다.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 하단 트라우마 회고 및 독백 -->
+            <div class="bg-zinc-950/80 backdrop-blur-md border border-zinc-800/50 rounded-2xl p-8 text-center italic text-sm text-zinc-400 shadow-xl mt-12">
+                "시간은 절대 우리를 위해 멈춰 주지 않아... 오빠를 탓할 사람은 아무도 없으니, 제발 정신 차려!"
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 모바일 고정 바텀 바 -->
+    <div class="md:hidden fixed bottom-0 left-0 right-0 p-4 bg-zinc-950/90 backdrop-blur-xl border-t border-zinc-800/50 z-40 flex gap-3">
+        <a href="#profile" class="flex-1 bg-zinc-900 hover:bg-zinc-800 text-zinc-200 py-3.5 rounded-xl text-xs font-bold text-center transition-colors tracking-widest border border-zinc-700/50">
+            PROFILE
+        </a>
+        <a href="#history" class="flex-1 bg-rose-900/40 hover:bg-rose-900/60 text-rose-200 py-3.5 rounded-xl text-xs font-bold text-center transition-colors tracking-widest border border-rose-500/30">
+            HISTORY
+        </a>
+    </div>
+
+    <!-- 🎵 떠 있는 BGM 재생/정지 버튼 (우측 하단) -->
+    <!-- 버튼도 유리 효과 느낌으로 세련되게 변경 -->
+    <button id="bgmBtn" class="fixed bottom-24 md:bottom-10 right-4 md:right-10 bg-zinc-900/80 backdrop-blur-md border border-zinc-700/50 text-zinc-300 w-14 h-14 rounded-full flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.5)] z-50 hover:scale-110 hover:bg-zinc-800 hover:text-white transition-all duration-300 group">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z"/>
+            <path d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89l.706.706z"/>
+            <path d="M8.707 11.182A4.5 4.5 0 0 0 10.025 8a4.5 4.5 0 0 0-1.318-3.182L8 5.525A3.5 3.5 0 0 1 9.025 8 3.5 3.5 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z"/>
+        </svg>
+        <span class="absolute right-16 bg-zinc-800 text-xs px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none tracking-widest font-mono">BGM ON/OFF</span>
+    </button>
+
+    <!-- 푸터 -->
+    <footer class="bg-zinc-950 py-16 px-4 text-center border-t border-zinc-900 pb-32 md:pb-16 text-zinc-600 text-xs">
+        <div class="max-w-6xl mx-auto space-y-4">
+            <p class="font-cinzel tracking-[0.3em] text-zinc-500">MEMBER OF THE SPECE CHARACTER LORE</p>
+            <p class="font-light">&copy; 2024 Yeon Twins. All Rights Reserved. 마법 가문의 든든한 긍지.</p>
+        </div>
+    </footer>
+
+    <!-- BGM 버튼 동작 스크립트 및 이미지 토글 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // BGM script
+            const bgm = document.getElementById('bgm');
+            const bgmBtn = document.getElementById('bgmBtn');
+            let isPlaying = false;
+
+            bgmBtn.addEventListener('click', () => {
+                if (isPlaying) {
+                    bgm.pause();
+                    bgmBtn.classList.remove('text-emerald-400', 'border-emerald-500/50', 'shadow-[0_0_20px_rgba(52,211,153,0.3)]');
+                    bgmBtn.classList.add('text-zinc-300', 'border-zinc-700/50');
+                } else {
+                    bgm.play();
+                    bgmBtn.classList.remove('text-zinc-300', 'border-zinc-700/50');
+                    bgmBtn.classList.add('text-emerald-400', 'border-emerald-500/50', 'shadow-[0_0_20px_rgba(52,211,153,0.3)]');
+                }
+                isPlaying = !isPlaying;
+            });
+
+            // Image Toggle Script
+            function setupImageToggle(twinId, originalModeText) {
+                const container = document.getElementById(`${twinId}-image-container`);
+                const imgElement = document.getElementById(`${twinId}-profile-img`);
+                const modeIndicator = document.getElementById(`${twinId}-image-mode-indicator`);
+                
+                const dailySrc = imgElement.getAttribute('data-daily-src');
+                const combatSrc = imgElement.getAttribute('data-combat-src');
+                let isDaily = true; // Start with daily image
+
+                // Set initial text
+                modeIndicator.textContent = `${originalModeText} (일상)`;
+
+                container.addEventListener('click', () => {
+                    if (isDaily) {
+                        imgElement.src = combatSrc;
+                        modeIndicator.textContent = `${originalModeText} (전투)`;
+                    } else {
+                        imgElement.src = dailySrc;
+                        modeIndicator.textContent = `${originalModeText} (일상)`;
+                    }
+                    isDaily = !isDaily;
+                });
+            }
+
+            // Setup for Yeon Da-jin (original text without mode indicator)
+            setupImageToggle('dajin', '1st Twin • Offense & Heal');
+
+            // Setup for Yeon Da-hee (original text without mode indicator)
+            setupImageToggle('dahee', '2nd Twin • High Healing');
+        });
+    </script>
+
+</body>
+</html>
